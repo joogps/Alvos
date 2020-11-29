@@ -5,7 +5,7 @@ let titleOpacity = 255;
 function setup() {
     createCanvas(windowWidth, windowHeight);
     
-    title = loadImage('Title.png');
+    title = loadImage('./assets/title.png');
 
     textAlign(CENTER);
 }
@@ -13,7 +13,7 @@ function setup() {
 function draw() {
     background(0);
 
-    noStroke()
+    noStroke();
 
     if (titleOpacity > 0.01) {
       tint(255, titleOpacity)
