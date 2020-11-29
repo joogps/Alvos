@@ -38,7 +38,7 @@ function draw() {
         for (let j = 0; j < targets.length; j++) {
           if (i != j && targets[i].checkIntersection(targets[j])) {
             if ("vibrate" in window.navigator) {
-              window.navigator.vibrate(50);
+              window.navigator.vibrate((targets[i].opacity*targets[j].opacity)/sq(255)*50);
             }
           }
         }
