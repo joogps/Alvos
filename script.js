@@ -18,13 +18,13 @@ function draw() {
 
     if (titleOpacity > 0.01) {
       tint(255, titleOpacity)
-      image(title, width/2, height/2-50, title.width/title.height*100, 100);
+      image(title, width/2, height/2-50, title.width/title.height*125, 125);
 
       fill(255, titleOpacity);
 
       textSize(height/42)
       textStyle(BOLD);
-      text('toque em qualquer lugar para começar', width/2, height/2+25);
+      text('toque em qualquer lugar para começar', width/2, height/2+50);
 
       if (!("vibrate" in window.navigator)) {
         textStyle(ITALIC);
