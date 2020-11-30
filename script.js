@@ -7,6 +7,7 @@ function setup() {
     
     title = loadImage('./assets/title.png');
 
+    imageMode(CENTER);
     textAlign(CENTER);
 }
 
@@ -17,15 +18,17 @@ function draw() {
 
     if (titleOpacity > 0.01) {
       tint(255, titleOpacity)
-      image(title, width/2-title.width/4, height/2-title.height/4-50, title.width/2, title.height/2);
+      image(title, width/2, height/2-50, title.width/title.height*100, 100);
 
-      fill(255, titleOpacity)
+      fill(255, titleOpacity);
+
+      textSize(height/42)
       textStyle(BOLD);
-      text('toque em qualquer lugar para começar', width/2, height/2);
+      text('toque em qualquer lugar para começar', width/2, height/2+25);
 
       if (!("vibrate" in window.navigator)) {
         textStyle(ITALIC);
-        text('*navegador não suporta a função de vibração', width/2, height/2+100);
+        text('*navegador não suporta a função de vibração', width/2, height-100);
       }
 
       if (targets.length > 0) {
